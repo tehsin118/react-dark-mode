@@ -1,0 +1,12 @@
+[data-theme="light"] {
+  --bg-color: #c2c2c2;
+  --text-color: #100114;
+  --bg-btn: red;
+}
+
+/* Dark mode styles */
+[data-theme="dark"] {
+  --bg-color: #1c1c1c;
+  --text-color: #fff;
+  --bg-btn: rgb(0, 102, 31);
+}
