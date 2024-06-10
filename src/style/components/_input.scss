@@ -10,8 +10,9 @@
   background: transparent;
   border-radius: 8px;
   border: 1.5px solid var(--secondary);
+  background: var(--bg-btn);
   input {
-    color: var(--primary);
+    color: var(--text-color);
     border: 0;
     background-color: transparent;
     width: 100%;
@@ -31,7 +32,7 @@
     font-family: Inter;
     font-size: 20px;
     font-weight: 400;
-    color: var(--primary);
+    color: var(--text-color);
     position: absolute;
     white-space: nowrap;
     line-height: 100%;
