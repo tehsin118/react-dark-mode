@@ -1,0 +1,141 @@
+// Input style here
+
+.input-wrapper {
+  border-radius: 8px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  padding: 0 22px;
+  position: relative;
+  background: transparent;
+  border-radius: 8px;
+  border: 1.5px solid var(--secondary);
+  input {
+    color: var(--primary);
+    border: 0;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    z-index: 2;
+  }
+  &.error {
+    border: 2px solid var(--danger);
+  }
+
+  label {
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--primary);
+    position: absolute;
+    white-space: nowrap;
+    line-height: 100%;
+    color: #aaa;
+    transition: all 0.3s linear;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+
+  &:focus-within {
+    border: 1.5px solid #3385ff;
+  }
+}
+
+.input-wrapper:focus-within label,
+.input-wrapper input:not([value=""]) + label,
+.input-wrapper input[type="date"] + label {
+  top: 0px;
+  left: 15px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.075px;
+  color: #333843;
+  background: var(--white);
+  padding: 0 10px;
+}
+
+.input-wrapper:focus-within .hide-on-focus,
+.input-wrapper input[type="search"]:not([value=""]) + label {
+  display: none;
+}
+
+// ----------------------- input type two
+
+.input-wrapper-two {
+  border-radius: 8px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  padding: 0 22px;
+  position: relative;
+  background: transparent;
+  border-radius: 8px;
+  border: 1.5px solid var(--secondary);
+  input {
+    color: var(--primary);
+    border: 0;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    z-index: 2;
+  }
+  &.error {
+    border: 2px solid var(--danger);
+  }
+
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   right: 0;
+  //   top: 0;
+  //   height: 100%;
+  //   width: 6px;
+  //   background-color: var(--accent);
+  // }
+  label {
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--primary);
+    position: absolute;
+    white-space: nowrap;
+    line-height: 100%;
+    color: #aaa;
+    transition: all 0.3s linear;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+
+  &:focus-within {
+    border: 1.5px solid #3385ff;
+  }
+}
+
+textarea.help {
+  border-radius: 10.863px;
+  border: 1.358px solid var(--faded-text, #9e9e9e);
+  width: 675.124px;
+  height: 338px;
+  padding: 12px;
+
+  &:focus-visible {
+    border: none;
+    outline: 1.358px solid var(--accent);
+  }
+}
+input::-webkit-autofill {
+  background-color: transparent !important;
+  background: transparent !important;
+}

@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
-import "./App.css";
+import "./style/main.scss";
+import Home from "./pages/home";
+import { Route, Routes } from "react-router-dom";
+import Button from "./components/button";
 
 function App() {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
@@ -16,13 +19,17 @@ function App() {
 
   return (
     <>
-      <div className="banner  ">
-        <h2>Theme Toggle Example</h2>
-
-        <button onClick={toggleTheme}>
-          {theme === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"}
-        </button>
-      </div>
+      {/* adjust button style acc to requirments */}
+      <Button
+        onClick={toggleTheme}
+        className="btn "
+        text={
+          theme === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"
+        }
+      ></Button>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </>
   );
 }
